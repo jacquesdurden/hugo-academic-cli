@@ -142,6 +142,10 @@ def parse_bibtex_entry(
     if "url" in entry:
         page.fm["url_pdf"] = clean_bibtex_str(entry["url"])
 
+    # Added by LJ, 06/08/2021    
+    if "arxiv" in entry:
+        page.fm["url_arxiv"] = clean_bibtex_str(entry["arxiv"])
+        
     if "doi" in entry:
         page.fm["doi"] = clean_bibtex_str(entry["doi"])
 
